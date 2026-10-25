@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WHAT IS THIS 💀</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  cursor: crosshair;
+}
+
+body {
+  margin: 0;
+  font-family: Impact, sans-serif;
+  text-align: center;
+  color: white;
+  background: linear-gradient(45deg, red, purple, blue, lime);
+  background-size: 400% 400%;
+  animation: rainbow 4s infinite alternate;
+  overflow-x: hidden;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+h1 {
+  font-size: clamp(40px, 10vw, 100px);
+  color: yellow;
+  text-shadow: 5px 5px black;
+  animation: shake 0.2s infinite;
+}
+
+@keyframes shake {
+  0% { transform: rotate(-3deg) scale(1); }
+  50% { transform: rotate(3deg) scale(1.06); }
+  100% { transform: rotate(-3deg) scale(1); }
+}
+
+p {
+  font-size: 25px;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(-2deg); }
+}
+
+button {
+  padding: 18px 25px;
+  margin: 12px;
+  border: 5px dashed black;
+  border-radius: 50%;
+  background: hotpink;
+  color: yellow;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: rotate(360deg) scale(1.3);
+  background: lime;
+  color: red;
+}
+
+.box {
+  display: inline-block;
+  margin: 20px;
+  padding: 25px;
+  background: black;
+  border: 8px dotted cyan;
+  transform: rotate(7deg);
+  box-shadow: 10px 10px 0 orange;
+}
+
+.emoji {
+  font-size: 65px;
+  animation: bounce 0.7s infinite alternate;
+}
+
+@keyframes bounce {
+  to { transform: translateY(-25px) rotate(30deg); }
+}
+
+#message {
+  font-size: 30px;
+  color: yellow;
+  min-height: 45px;
+  overflow-wrap: anywhere;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🤡 WHAT IS THIS WEBSITE 🤡</h1>
+
+<div class="emoji">🦆💀🛸🍕</div>
+
+<p>Welcome to the internet's biggest mistake.</p>
+
+<div class="box">
+  <h2>⚠️ IMPORTANT NOTICE ⚠️</h2>
+  <p style="animation:none">Is website ka koi matlab nahi hai.</p>
+  <p style="animation:none">Please apna dimaag ghar chhod kar aayein.</p>
+</div>
+
+<br>
+
+<button onclick="nonsense()">CLICK ME 😈</button>
+<button onclick="changeColor()">CHANGE MY WORLD 🌈</button>
+<button onclick="dance()">MAKE IT WEIRD 🕺</button>
+
+<div id="message"></div>
+
+<h2>Today's scientific facts 🤓</h2>
+<p>🐟 Fish can swim. Breaking news.</p>
+<p>🍕 Pizza is round. The universe is confused.</p>
+<p>🗿 This website has achieved absolutely nothing.</p>
+
+<script>
+const messages = [
+  "Congratulations! You did absolutely nothing. 🏆",
+  "Your mouse has left the chat. 🖱️",
+  "ERROR 404: COMMON SENSE NOT FOUND 💀",
+  "A duck is now your website manager 🦆",
+  "NASA wants to know your location 🚀",
+  "Bro clicked a button and changed history 😭",
+  "Loading brain cells... 0% complete 🤡",
+  "The website is judging you silently 👁️"
+];
+
+function nonsense() {
+  document.getElementById("message").textContent =
+    messages[Math.floor(Math.random() * messages.length)];
+}
+
+function changeColor() {
+  document.body.style.background =
+    `hsl(${Math.random() * 360}, 100%, 50%)`;
+}
+
+function dance() {
+  document.body.style.transform =
+    `rotate(${Math.random() * 4 - 2}deg)`;
+
+  document.querySelectorAll("h1, p, .box, button").forEach(el => {
+    el.style.transform =
+      `rotate(${Math.random() * 50 - 25}deg)`;
+  });
+
+  nonsense();
+}
+
+setInterval(() => {
+  document.title = [
+    "WHAT IS THIS 💀",
+    "HELP ME 🤡",
+    "DUCK DETECTED 🦆",
+    "BRAIN NOT FOUND"
+  ][Math.floor(Math.random() * 4)];
+}, 1500);
+</script>
+
+</body>
+</html>
