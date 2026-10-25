@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -285,6 +285,38 @@
         `rotate(${Math.floor(Math.random() * 360)}deg)`;
     });
   </script>
+  ```html
+<button id="continueBtn" type="button">
+  Continue 🚀
+</button>
+
+<style>
+  #continueBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  #continueBtn:hover {
+    transform: scale(1.04);
+  }
+</style>
+
+<script>
+  document.getElementById("continueBtn").addEventListener("click", function () {
+    // Yahan ad network ka official click-triggered code lagayein.
+    // Page load par popunder trigger nahi kiya jayega.
+    alert("Continuing...");
+  });
+</script>
+```
 </body>
 </html>
-```
